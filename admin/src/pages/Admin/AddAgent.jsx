@@ -151,8 +151,14 @@ const AddAgent = () => {
                                 <option value="Glass Installation">Glass Installation</option>
                                 <option value="Tails Installer">Tails Installer</option>
                                 <option value="Flower Decorater">Flower Decorater</option>
+                                <option value="Solar Installation">Solar Installation</option>
                                 <option value="Laundry">Laundry</option>
+                                <option value="Event Planer">Event Planer</option>
                                 <option value="Plumber">Plumber</option>
+                                <option value="Chef">Chef</option>
+                                <option value="Roofer">Roofer</option>
+                                <option value="Puncher">Puncher</option>
+                                
                             </select>
                         </div>
 

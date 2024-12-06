@@ -44,7 +44,7 @@ const Appointment = () => {
       //Setting end time of the date with index
       let endTime = new Date()
       endTime.setDate(today.getDate() + i)
-      endTime.setHours(21, 0, 0, 0)
+      endTime.setHours(24, 0, 0, 0)
 
       //Setting hours
       if (today.getDate() === currentDate.getDate()) {
@@ -52,7 +52,7 @@ const Appointment = () => {
         currentDate.setMinutes(currentDate.getMinutes() > 30 ? 30 : 0)
 
       } else {
-        currentDate.setHours(10)
+        currentDate.setHours(0)
         currentDate.setMinutes(0)
       }
 
