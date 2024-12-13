@@ -16,6 +16,7 @@ const AddAgent = () => {
     const [about, setAbout] = useState('')
     const [speciality, setSpeciality] = useState('Painter')
     const [education, setEducation] = useState('')
+    const [city, setCity] = useState('')
     const [address1, setAddress1] = useState('')
     const [address2, setAddress2] = useState('')
 
@@ -39,6 +40,7 @@ const AddAgent = () => {
             formData.append('fees', Number(fees))
             formData.append('about', about)
             formData.append('speciality', speciality)
+            formData.append('city', city)
             formData.append('education', education)
             formData.append('address', JSON.stringify({ line1: address1, line2: address2 }))
 
@@ -57,6 +59,7 @@ const AddAgent = () => {
                 setEducation('')
                 setAbout('')
                 setFees('')
+                setCity('')
             } 
 
             const { data } = await axios
@@ -167,7 +170,41 @@ const AddAgent = () => {
                             <input onChange={(e) => setEducation(e.target.value)} value={education} className='border rounded py-2 px-3' type="text" placeholder='Education' required />
                         </div>
 
-                        <div>
+                        <div className=''>
+                            <select onChange={ (e) =>setCity( e.target.value)} value={city} name="" className='border py-2 rounded px-3 mb-3' id="">
+                                <option value="Bagalkot">Bagalkot</option>
+                                <option value="Bengaluru Urban">Bengaluru Urban</option>
+                                <option value="Bengaluru Rural">	Bengaluru Rural</option>
+                                <option value="Belagavi">	Belagavi</option>
+                                <option value="Ballari">Ballari</option>
+                                <option value="Bidar">	Bidar</option>
+                                <option value="Vijayapur">	Vijayapur</option>
+                                <option value="Chamarajanagar">Chamarajanagar</option>
+                                <option value="Chikballapur">Chikballapur</option>
+                                <option value="Chikkamagaluru">Chikkamagaluru</option>
+                                <option value="Chitradurga">	Chitradurga</option>
+                                <option value="Dakshina Kannada">Dakshina Kannada</option>
+                                <option value="Davanagere">	Davanagere</option>
+                                <option value="Dharwad">Dharwad</option>
+                                <option value="Gadag">Gadag</option>
+                                <option value="Kalaburagi">Kalaburagi</option>
+                                <option value="Hassan">Hassan</option>
+                                <option value="Haveri">Haveri</option>
+                                <option value="Kodagu">Kodagu</option>
+                                <option value="Kolar">Kolar</option>
+                                <option value="Koppal">Koppal</option>
+                                <option value="Mandya">Mandya</option>
+                                <option value="Mysuru">Mysuru</option>
+                                <option value="Raichur">Raichur</option>
+                                <option value="Ramanagara">Ramanagara</option>
+                                <option value="Shivamogga">Shivamogga</option>
+                                <option value="Tumakuru">Tumakuru</option>
+                                <option value="Udupi">Udupi</option>
+                                <option value="Uttara Kannada">Uttara Kannada</option>
+                                <option value="Yadgir">Yadgir</option>
+                                <option value="Vijayanagara">Vijayanagara</option>
+                               
+                            </select>
                             <p>Address</p>
                             <input onChange={(e) => setAddress1(e.target.value)} value={address1} className='border rounded py-2 px-3  m-2' type="text" placeholder='Address 1' required />
                             <input onChange={(e) => setAddress2(e.target.value)} value={address2} className='border rounded py-2 px-3 m-2' type="text" placeholder='Address 2' required />

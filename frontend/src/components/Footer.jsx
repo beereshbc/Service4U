@@ -32,6 +32,7 @@ const Footer = () => {
                         <li> <a href="mailto:service4u2024@gmail.com">bcbeereshkumar@gmail.com</a></li>
                     </ul>
                 </div>
+
             </div>
                 {/* Copyright text */}
             <div>

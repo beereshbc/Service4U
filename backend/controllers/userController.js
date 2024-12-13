@@ -308,5 +308,28 @@ const verifyRazorpay = async (req, res) => {
     }
 } 
 
+// const agentCityList = async (req, res) => {
+//     try {
+//         const { city } = req.body; // Extract the city from the request body
+
+//         if (!city) {
+//             return res.status(400).json({ message: "City is required" }); // Send a proper response
+//         }
+
+//         const agents = await agentModel.find({ city }).limit(10); // Query agents by city with a limit
+
+//         if (agents.length === 0) {
+//             return res.status(404).json({ message: "No agents found in the specified city" });
+//         }
+
+//         res.status(200).json({ agents }); // Return the agents as a JSON response
+//     } catch (error) {
+//         console.error("Error querying agents:", error.message);
+//         res.status(500).json({ message: "Internal server error" }); // Handle errors gracefully
+//     }
+
+
+// };
+
 
 export { registerUser, loginUser, getProfile, updateProfile, bookAppointment, listAppointment, cancelAppointment, paymentRazorpay, verifyRazorpay } 

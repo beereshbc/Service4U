@@ -14,13 +14,14 @@ import appointmentModel from "../models/appointmentModel.js"
 const addAgent = async (req, res) => {
 
     try {
-        const { name, email, password, speciality, education, experience, about, fees, address } = req.body
+        const { name, email, password, speciality, education, experience, about, fees, address, city } = req.body
         const imageFile = req.file
 
         //checking for all data to add agent. if any one is missing it detact and send a messge Missing details
-        if (!name || !email || !password || !speciality || !education || !experience || !about || !fees || !address) {
+        if (!name || !email || !password || !speciality || !education || !experience || !about || !fees || !address || !city) {
             return res.json({ success: false, message: 'Missing Details' });
         }
+        
 
         //validating email format
         if (!validator.isEmail(email)) {
@@ -51,6 +52,7 @@ const addAgent = async (req, res) => {
             experience,
             about,
             fees,
+            city,
             address: JSON.parse(address),
             date: Date.now()
         }

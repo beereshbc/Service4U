@@ -55,6 +55,7 @@ const Appointment = () => {
         currentDate.setHours(0)
         currentDate.setMinutes(0)
       }
+      
 
       let timeSlots = []
 
@@ -160,9 +161,11 @@ const Appointment = () => {
 
             {agentInfo.name}
             <img className='w-5' src={assets.verified_icon} alt="" />
+            <p>⭐⭐⭐⭐⭐</p>
           </p>
           <div className='flex items-center gap-2 text-sm mt-1 text-gray-600'>
             <p>{agentInfo.education} . {agentInfo.speciality}</p>
+            
             <button className='py-0.5 px-2 border text-xs rounded-full'>{agentInfo.experience}</button>
           </div>
 
@@ -176,6 +179,7 @@ const Appointment = () => {
           <p className='text-gray-500 font-medium mt-4'>
             Appointment fee: <span className='text-gray-600'>{currencySymbol} {agentInfo.fees}</span>
           </p>
+          
         </div>
       </div>
 
