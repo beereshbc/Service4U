@@ -30,7 +30,7 @@ const Services = () => {
     <div>
 
 
-<div className=' flex gap-2'>
+{/* <div className=' flex gap-2'>
 <select
            className="py-1 px-3 border rounded text-sm transition-all"
           onChange={(e) => setCityData(e.target.value)}
@@ -71,7 +71,7 @@ const Services = () => {
         </select>
 
         <button onClick={''} className="py-1 px-3 border rounded text-sm transition-all">Search</button>
-</div>
+</div> */}
 
 
 
